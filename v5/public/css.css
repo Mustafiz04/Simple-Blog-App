@@ -1,0 +1,240 @@
+
+#navbaar{
+    z-index: 999;
+}
+.navbaar{
+    z-index: 999;
+}
+/* homepage */
+#homepage-header{
+    height: 90vh;
+    width: 100%;
+    /* position: absolute; */
+    /* border: 1px solid blue; */
+}
+#landing-header{
+    /* border: 1px solid red; */
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    padding-top: 40vh;
+    height: 90vh;
+    /* background-color: red; */
+    
+    animation: imageChange 20s linear infinite
+}
+@keyframes imageChange{
+    0%{
+        background-image: url(https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?cs=srgb&dl=audience-celebration-concert-1190297.jpg&fm=jpg) ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation-timing-function: ease-in;
+    }
+    50%{
+        background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?cs=srgb&dl=adventure-climb-daylight-1183986.jpg&fm=jpg) ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation-delay: 10s;
+        opacity: 1;
+        animation-timing-function: ease-out
+    }
+    100%{
+        background-image: url(https://images.pexels.com/photos/1201673/pexels-photo-1201673.jpeg?cs=srgb&dl=action-adults-adventure-1201673.jpg&fm=jpg) ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation-delay: 10s;
+        /* opacity: 0; */
+    }
+}
+#landing-header h1{
+    font-size: 3.5rem;
+    padding-bottom: 5px;
+    color: rgb(63, 1, 1);
+}
+/* #slide{
+    position: relative;
+    height: 100vh;
+}
+#landing-header h1{
+    font-size: 3.5rem;
+    padding-bottom: 5px;
+}
+.slideshow{
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slideshow li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+.slideshow li:nth-child(1){
+    background-image: url(https://images.pexels.com/photos/1201673/pexels-photo-1201673.jpeg?cs=srgb&dl=action-adults-adventure-1201673.jpg&fm=jpg);
+}
+.slideshow li:nth-child(2){
+    background-image: url(https://images.pexels.com/photos/1748568/pexels-photo-1748568.jpeg?cs=srgb&dl=adventure-arid-desert-1748568.jpg&fm=jpg);
+    animation-delay: 10s;
+}
+.slideshow li:nth-child(3){
+    background-image: url(https://images.pexels.com/photos/1552235/pexels-photo-1552235.jpeg?cs=srgb&dl=bird-s-eye-view-car-desert-1552235.jpg&fm=jpg);
+    animation-delay: 20s;
+}
+.slideshow li:nth-child(4){
+    background-image: url(https://images.pexels.com/photos/1455952/pexels-photo-1455952.jpeg?cs=srgb&dl=adventure-arid-barren-1455952.jpg&fm=jpg);
+    animation-delay: 30s;
+}
+.slideshow li:nth-child(5){
+    background-image: url(https://images.pexels.com/photos/1199967/pexels-photo-1199967.jpeg?cs=srgb&dl=arid-bird-s-eye-view-desert-1199967.jpg&fm=jpg);
+    animation-delay: 40s;
+}
+
+@keyframes imageAnimation{
+    0%{
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10%{
+        opacity: 1;
+        animation-timing-function: ease-out
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+}
+ */
+
+/* campground */
+#heading-box{
+    padding: 20px;
+}
+#heading_name{
+    font-size: 4rem;
+}
+#tagline{
+    color: brown;
+    font-size: 1.3rem;
+}   
+#item{
+    margin: 20px;
+    /* background-color: rgb(245, 245, 245); */
+}
+#display{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    /* padding: 10px; */
+}
+#item{
+    border: 1px solid black;
+    padding: 10px;
+    height: 600px;
+}
+#item-title{
+    font-size: 2.5rem;
+    color: rgb(56, 4, 4);
+}
+#display-item{
+    /* border: 1px solid red; */
+    margin: 10px;
+    margin: 5px auto;
+    width: 350px;
+    height: 300px;
+}
+#item-content{
+    padding: 5px;
+    border: 1px solid rgb(197, 197, 197);
+    width: 400px;
+    margin: 5px auto;
+    font-size: 1rem;
+    display: inline-block;
+}
+#created{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+
+@media (max-width: 1320px){
+    #item-content{
+        width: 350px;
+    }
+}
+@media (max-width: 500px){
+    #item-content{
+        width: 250px;
+    }
+    #created{
+        grid-template-columns: repeat(2, 140px);
+    }
+    #item{
+        height: 570px;
+    }
+    #display-item{
+        width: 250px;
+        height: 200px;
+    }
+    #display-item img{
+        width: 250px;
+        height: 200px;
+    }
+}
+
+
+
+/* show */
+#show-item{
+    padding-top: 30px;
+}
+#show-item h1{
+    font-size: 3rem;
+    text-transform: uppercase;   
+}
+#show-content{
+    font-size: 1rem;
+    /* border: 1px solid black; */
+    word-spacing: 5px;
+    width: 70%;
+    margin: 15px auto;
+    text-align: left;
+}
+#show-delete{
+    display: inline;
+}
+#show-comment{
+    /* border: 1px solid black; */
+    width: 70%;
+    margin: 20px auto;
+    padding: 5px 0;
+    /* background-color: rgba(211, 207, 246, 0.623); */
+}
+#comment{
+    background-color: white;
+    margin: 0 5px;
+    padding: 5px;
+}

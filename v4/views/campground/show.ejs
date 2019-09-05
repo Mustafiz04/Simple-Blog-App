@@ -1,0 +1,32 @@
+<% include ../partial/header %>
+
+    <div class="container-fluid text-center">
+        <h1><%= camp.name %>  </h1>
+        <img src="<%= camp.image %>" alt="" width="50%" height="50%">
+        <p> <%- camp.discription %> </p>
+        
+        <a class="btn btn-info" href="/campgrounds/<%=camp._id%>/comments/new">Add new comments</a>
+        
+        <% if(currentUser){ %>
+            <a class="btn btn-warning" href="/campgrounds/<%= camp._id %>/edit"> Edit <%= camp.name %></a>
+            <form action="/campgrounds/<%= camp._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        <% } %>
+    </div>
+    <% camp.comment.forEach(function(comment){ %>
+        <p>
+            <strong> <%= comment.author %> </strong>  - <%= comment.text %> 
+        </p>
+    <% }) %>
+
+
+    <div class="container">
+        <p>
+            <a class="btn btn-dark" href="/campgrounds"> Back to Camp </a>
+        </p>
+    </div>
+
+
+
+<% include ../partial/footer %>

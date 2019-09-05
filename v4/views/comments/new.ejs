@@ -1,0 +1,39 @@
+<% include ../partial/header %>
+
+
+    <div class="container">
+        <div class="column">
+            <h1 style="text-align: center">Add New Comment to <%= foundCamp.name %> </h1>
+
+            <br>
+
+            <div style="width: 30%; margin: 0 auto;">
+                <form action="/campgrounds/<%= foundCamp._id %>/comments" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" value="<%= currentUser.username %>" name="comment[author]" id="">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Comment" name="comment[text]" id="">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg bt-default btn-block">Submit !</button>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+            
+            <br>
+
+            <p>
+                <a class="btn btn-primary btn-large" href="/campgrounds/<%= foundCamp._id %>">Back to <%= foundCamp.name %></a>
+            </p>
+        </div>
+        
+    </div>
+ 
+    
+    
+    
+<% include ../partial/footer %>
+

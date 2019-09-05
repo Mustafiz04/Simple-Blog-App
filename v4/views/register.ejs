@@ -1,0 +1,39 @@
+<% include partial/header %>
+
+
+    <div class="container">
+        <div class="column">
+            <h1 style="text-align: center">Sign Up! </h1>
+
+            <br>
+
+            <div style="width: 30%; margin: 0 auto;">
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username" name="username" id="">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" placeholder="Password" name="password" id="">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg bt-default btn-block">Sign Up!</button>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+            
+            <br>
+
+            <p>
+                <a class="btn btn-primary btn-large" href="/campgrounds">Back to CampGround</a>
+            </p>
+        </div>
+        
+    </div>
+ 
+    
+    
+    
+<% include partial/footer %>
+

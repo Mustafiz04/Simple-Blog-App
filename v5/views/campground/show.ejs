@@ -1,0 +1,39 @@
+<% include ../partial/header %>
+
+    <div class="container-fluid text-center" id="show-item">
+        <h1><%= camp.name %>  </h1>
+        <img src="<%= camp.image %>" alt="" width="70%" height="70%">
+        <p id="show-content"> <%- camp.discription %> </p>
+        <small> <%= camp.created.toDateString() %> </small>
+        <p> <em>Submitted by <%= camp.author.username %></em> </p>
+        
+        <a class="btn btn-info btn-sm" href="/campgrounds/<%=camp._id%>/comments/new">Add new comments</a>
+        
+        <% if(currentUser && camp.author.id.equals(currentUser._id)){ %>
+            <a class="btn btn-warning btn-sm" href="/campgrounds/<%= camp._id %>/edit"> Edit <%= camp.name %></a>
+            <form action="/campgrounds/<%= camp._id %>?_method=DELETE" method="POST" id="show-delete">
+                <button class="btn btn-danger btn-sm" >Delete</button>
+            </form>    
+        <% } %>
+        
+    </div>
+    <div id="show-comment">
+        <% camp.comment.forEach(function(comment){ %>
+            <p id="comment">
+                <strong> <%= comment.author.username %> </strong>  - <%= comment.text %> 
+                
+            </p>
+        <% }) %>
+    </div>
+    
+
+
+    <div class="container">
+        <p>
+            <a class="btn btn-dark" href="/campgrounds"> Back to Camp </a>
+        </p>
+    </div>
+
+
+
+<% include ../partial/footer %>
